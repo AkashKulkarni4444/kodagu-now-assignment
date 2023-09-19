@@ -22,7 +22,7 @@ import {
   rightCompleteArrow,
 } from "@/components/constants";
 import SideBarIndComponent from "./Content/SideBarIndComponent";
-const NavbarSmallScreen = () => {
+const NavbarSmallScreen = ({screenWidth}) => {
   const [sidebarIsOpen, setidebarIsOpen] = useState(false);
   const emailRight = (
     <div className="flex items-center gap-2">
@@ -43,7 +43,7 @@ const NavbarSmallScreen = () => {
   return (
     <div className="flex items-center justify-between p-3 px-5 bg-[#15132b] ">
       {sidebarIsOpen && (
-        <div className=" fixed left-0 top-0 bottom-0 w-[35%] flex flex-col outline-none outline-offset-2 z-[1400] h-screen max-w-xs bg-[#15132b] ">
+        <div className={`fixed left-0 top-0 bottom-0 ${screenWidth<640?'w-[70%]':'w-[35%]'} flex flex-col outline-none outline-offset-2 z-[1400] h-screen max-w-xs bg-[#15132b] `}>
           <div className="flex items-center justify-between p-4 ps-3 pe-3">
             <p className="text-[18px] text-white">weframetech</p>
             <div

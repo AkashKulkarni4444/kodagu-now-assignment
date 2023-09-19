@@ -6,7 +6,7 @@ import {
   threeVerticalDotsIcon,
 } from "@/components/constants";
 import companyLogo from "../companyLogo.png";
-const Title = () => {
+const Title = ({screenWidth}) => {
   return (
     <div className="w-full flex justify-between bg-[#15132b] ps-5 pe-5 p-7 rounded-[12px]">
       <div className="flex gap-2 items-start w-full">
@@ -25,7 +25,7 @@ const Title = () => {
                 Created by Instructor Day on November 31, 2022
               </p>
             </div>
-            <div className="flex gap-2 items-center">
+            <div className={`${screenWidth<640?'hidden':'flex'} gap-2 items-center`}>
               <div>
                 <p className="text-[14px] font-medium text-white">
                   Centered Martial Arts

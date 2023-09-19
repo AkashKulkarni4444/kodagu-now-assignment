@@ -42,13 +42,13 @@ export default function Home() {
           <SideBar />
           <div className="w-[83%] ml-[17%] bg-[#0d0b21] text-white">
             <Navbar />
-            <Content/>
+            <Content screenWidth={size.width}/>
           </div>
         </div>
       ) : (
         <div className="w-full bg-[#0d0b21] text-white">
-          <NavbarSmallScreen />
-          <Content />
+          <NavbarSmallScreen screenWidth={size.width} />
+          <Content screenWidth={size.width} />
         </div>
       )}
     </>
